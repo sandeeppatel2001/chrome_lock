@@ -1,0 +1,44 @@
+{
+  "name": "sandeep_chrom_locker",
+  "description": "sand_descrip..",
+  "version": "3.4",
+  "manifest_version": 3,
+  "icons": {
+    "16": "./icon.png",
+    "32": "./icon.png",
+    "48": "./icon.png",
+    "128": "./icon.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "./options.html",
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "host_permissions": [
+    "https://www.google.com/",
+    "<all_urls>",
+    "*://*.google.com/*",
+    "*://*.abcd.com/*",
+    "*://*.example.com/*",
+    "https://*.xyz.com/*",
+    "*://*.headers.com/*"
+  ],
+  "permissions": [
+    "tabs",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "activeTab"
+  ]
+}
